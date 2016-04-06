@@ -8,12 +8,12 @@
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+		 width: 100vw;
+    height: 100%;   
 }
 
 body {
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 img {
@@ -22,8 +22,9 @@ img {
 }
 
 #logo {
-	display: table-cell;
+	display: table-row;
     text-align: center;
+	margin-top: 15px;
 }
 
 #logo svg {
@@ -36,14 +37,13 @@ img {
     text-align: center;
     vertical-align: middle;
 	background-color: rgba(255,255,255,0.5);
-	padding: 10px 0;
+	padding: 20px 0;
 }
 
 .text-vertical-center h1 {
     margin: 0;
     padding: 0;
-    font-size: 2.5em;
-    font-weight: 200;
+	font-size: 16px;
 	color: #000;
 }
 
@@ -117,8 +117,8 @@ img {
 
 .green {
 	color: #b1ce23;
-	font-weight: bold;
-	font-size: 1.8em;
+	/*font-size: 1.8em;*/
+	font-size: 14px;
 }
 
 @keyframes visible {
@@ -141,18 +141,28 @@ img {
   }
 }
 
-#logo {
-	display: table-row;
-    text-align: center;
-	margin-top: 15px;
-}
-
 /* Custom Button Styles */
+
+.close {
+	color: #fff;
+	opacity: 1;
+	font-size: 38px;
+	font-weight: lighter;
+	margin-right: 30px;
+	margin-top: 20px;
+}
 
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: #b1ce23;
+    background-color: rgba(102, 107, 101, 0.7);
+}
+
+.text-vertical-center .btn-lg {
+	padding: 15px 25px;
+	font-size: 24px;
+	border: 2px solid #949793;
+	border-radius: 10px !important;
 }
 
 .btn-dark:hover,
@@ -197,12 +207,7 @@ hr.small {
     position: fixed;
     top: 0;
     right: 0;
-	opacity: 0;
-	-webkit-animation: visible 2s;
-	 animation: visible 2s;
-	animation-delay: 4s;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+	display: block !important;
 }
 
 .icon-bar {
@@ -211,11 +216,7 @@ hr.small {
 	  font-size: 200% !important;
 }
 
-@media(min-width:768px) {
-	.navbar-toggle {
-		display: block !important;
-	}
-}
+
 
 .modal {
 	background-color: rgba(0, 0, 0, 0.7);
@@ -257,7 +258,7 @@ hr {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/businessman-w3.jpg) no-repeat center center scroll;
+    background: url(../img/businessman-w3.jpg)  no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -266,17 +267,16 @@ hr {
 
 /* About */
 
-.about {
-    padding: 50px 75px;
-}
+.about {}
 
 .about a {
 	text-decoration: none;
 	color: #000;
 }
 
-.about h3 {
-	font-size: 2.5em;
+.expand {
+	/*background-color: #000;
+	color: #fff;*/
 }
 
 /* Services */
@@ -337,14 +337,49 @@ hr {
     height: 500px;
 }
 
-@media(max-width:768px) {
+/*@media(max-width:768px) {
     .map {
         height: 75%;
     }
-}
+}*/
 
 /* Footer */
 
 footer {
     padding: 100px 0;
 }
+
+@media screen and (min-width: 768px) {
+	.navbar-toggle {
+		display: block !important;
+	}
+	
+	.about {
+		padding: 50px 75px;
+	}
+	.about h3 {
+		font-size: 2.5em;
+	}
+	
+	p {
+		font-size: 20px;
+	}
+	
+	.green {
+		font-size: 1.8em;
+		font-weight: 700;
+	}
+	
+	.text-vertical-center h1 {
+		font-size: 2.5em;
+		font-weight: 300;
+	}
+	
+	.mainH {
+		color: #555;
+		font-weight: lighter !important;
+		font-family: "Bodoni MT";
+	}
+}
+
+
